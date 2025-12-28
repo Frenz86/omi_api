@@ -363,6 +363,7 @@ def main():
                     st.success(f"✅ Trovato!")
                     st.code(f"Lat: {lat:.6f}\nLon: {lon:.6f}")
                     
+                    
                     geopoi_url = "https://www1.agenziaentrate.gov.it/servizi/geopoi_omi/index.php"
                     st.markdown(f"""
                     <a href="{geopoi_url}" target="_blank" class="map-link">
