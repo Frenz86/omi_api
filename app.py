@@ -362,7 +362,7 @@ def main():
                     lat, lon = coordinate
                     st.success(f"✅ Trovato!")
                     st.code(f"Lat: {lat:.6f}\nLon: {lon:.6f}")
-                    
+
                     
                     geopoi_url = "https://www1.agenziaentrate.gov.it/servizi/geopoi_omi/index.php"
                     st.markdown(f"""
@@ -371,7 +371,7 @@ def main():
                     </a>
                     """, unsafe_allow_html=True)
                     
-                    st.info("📋 Coordinate per GeoPOI (clicca l'icona per copiare):")
+                    st.info("📋 Copia Coord. GeoPOI :")
                     st.code(f"{lon:.6f}, {lat:.6f}")
                 else:
                     st.error("❌ Indirizzo non trovato")
