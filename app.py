@@ -377,6 +377,7 @@ def main():
                     st.error("❌ Indirizzo non trovato")
             elif geocode_btn and not comune:
                 st.warning("⚠️ Seleziona prima un comune")
+                
     
     # ============================================
     # AREA PRINCIPALE - RISULTATI
