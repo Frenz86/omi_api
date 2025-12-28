@@ -370,7 +370,8 @@ def main():
                     </a>
                     """, unsafe_allow_html=True)
                     
-                    st.info(f"📋 Coordinate per GeoPOI: **{lon:.6f}, {lat:.6f}**")
+                    st.info("📋 Coordinate per GeoPOI (clicca l'icona per copiare):")
+                    st.code(f"{lon:.6f}, {lat:.6f}")
                 else:
                     st.error("❌ Indirizzo non trovato")
             elif geocode_btn and not comune:
