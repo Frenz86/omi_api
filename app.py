@@ -340,7 +340,7 @@ def main():
         st.markdown("---")
         
         # Bottone ricerca
-        cerca = st.button("🔍 Cerca Quotazioni", type="primary", use_container_width=True)
+        cerca = st.button("🔍 Cerca Quotazioni", type="primary", width="stretch")
         
         st.markdown("---")
         
@@ -352,7 +352,7 @@ def main():
                 help="Inserisci via e numero civico"
             )
             
-            geocode_btn = st.button("🗺️ Geolocalizza", use_container_width=True)
+            geocode_btn = st.button("🗺️ Geolocalizza", width="stretch")
             
             if geocode_btn and indirizzo and comune:
                 nome_comune = comune.split(" (")[0] if " (" in comune else comune
@@ -496,7 +496,7 @@ def main():
                         
                         st.dataframe(
                             df_acquisto,
-                            use_container_width=True,
+                            width="stretch",
                             hide_index=True,
                             column_config={
                                 "Tipologia": st.column_config.TextColumn("🏠 Tipologia", width="large"),
@@ -519,7 +519,7 @@ def main():
                         
                         st.dataframe(
                             df_affitto,
-                            use_container_width=True,
+                            width="stretch",
                             hide_index=True,
                             column_config={
                                 "Tipologia": st.column_config.TextColumn("🏠 Tipologia", width="large"),
@@ -539,7 +539,7 @@ def main():
                         
                         st.dataframe(
                             df_completo,
-                            use_container_width=True,
+                            width="stretch",
                             hide_index=True
                         )
                         
@@ -554,7 +554,7 @@ def main():
                                 data=csv,
                                 file_name=f"quotazioni_omi_{zona_omi}_{comune.split(' (')[0]}.csv",
                                 mime="text/csv",
-                                use_container_width=True
+                                width="stretch"
                             )
                         
                         with col_dl2:
@@ -570,7 +570,7 @@ def main():
                                 data=excel_data,
                                 file_name=f"quotazioni_omi_{zona_omi}_{comune.split(' (')[0]}.xlsx",
                                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                use_container_width=True
+                                width="stretch"
                             )
                     
                     # Note finali
