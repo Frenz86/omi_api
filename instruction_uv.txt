@@ -1,0 +1,13 @@
+uv init --bare --python 3.13
+
+uv add streamlit
+uv add openpyxl
+
+.venv\Scripts\activate
+
+uv run streamlit run app.py
+
+###################################
+uv sync
+.venv\Scripts\activate
+uv run streamlit run app.py
